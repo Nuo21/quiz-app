@@ -8,12 +8,13 @@
     <title>Code Quiz</title>
 </head>
 <body>
-    <h1>Quiz</h1>
-    <!--Button to begin the quiz-->
-    <div class="start_btn"><button>Start Quiz</button></div>
+   <!-- <h1>Quiz</h1>
+
+    <div class="start_btn"><button>Start Quiz</button></div>-->
 
     <!--The main container for the quiz questions and answer options-->
-    <div class="container">
+    <!--Commenting out line 17-40 to try differnet approach-->
+    <!--<div class="container">
         <div class="quiz_header">
             <h2 id="question">Questions Here</h2>
             <ul>
@@ -36,6 +37,19 @@
             </ul>
         </div>
         <button id="submit">Submit</button>
+    </div>-->
+
+    <!--Header to allow user to view highscores and see the time remaining -->
+    <header>
+        <h5 id="view_highscores">View Highscores</h5>
+        <h5 id="timer">Time Left: </h5>
+    </header>
+
+    <!--Container that will explain the quiz and rules and allow user to start the quiz-->
+    <div id="rules_container">
+        <h1>Quiz</h1>
+        <p>Description and rules of quiz here.</p>
+        <button id="start_game">Start Quiz</button>
     </div>
 
     <script src="script.js"></script>

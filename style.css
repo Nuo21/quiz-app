@@ -1,10 +1,47 @@
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-body {
+/*Temporary commenting out line 7-46 to try different approach*/
+/*body {
     background-color: black;
     color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
 }
+
+.container {
+    background-color: gray;
+    border-radius: 10px;
+    width: 500px;
+    overflow: hidden;
+}
+
+.quiz_header {
+    padding: 4rem;
+}
+
+.quiz_header h2 {
+    padding: 1rem;
+    text-align: center;
+}
+
+.quiz_header ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quiz_header ul li {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.quiz_header ul li label {
+    cursor: pointer;
+}*/
+
