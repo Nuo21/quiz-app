@@ -1,6 +1,45 @@
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: rgb(0, 255, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+header h5 {
+    font-size: 20px;
+    display: inline;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.start {
+    text-align: center;
+    align-items: center;
+}
+
+.start h1 {
+    text-align: center;
+}
+
+.start p {
+    text-align: center;
 }
 
 /*Temporary commenting out line 7-46 to try different approach*/
