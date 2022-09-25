@@ -65,10 +65,10 @@
     <!--Container that will show result and ask for initials-->
     <div class="hidden" id="ending_container">
         <div class="container end">
-            <div id="score">
+            <div id="score_msg">
                 <h1>Congrats! You have completed the quiz!</h1>
             </div>
-            <form>
+            <form id="initials">
                 <p>Enter Initials: <input type="text" name="initials" class="text_input" id="initials"/></p>
                 <button type="submit" id="submit_score">Submit</button>
             </form>
@@ -76,7 +76,7 @@
     </div>
 
     <!--Container for highscores-->
-    <div class="shown" id="highscores_container">
+    <div class="shown" id="highscore_container">
         <div class="container highscores">
             <h1 class="highscore">Highscores</h1>
             <ol class="score_list" id="highscoreList"></ol>
