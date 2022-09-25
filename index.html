@@ -63,7 +63,7 @@
     </div>
 
     <!--Container that will show result and ask for initials-->
-    <div class="shown" id="ending_container">
+    <div class="hidden" id="ending_container">
         <div class="container end">
             <div id="score">
                 <h1>Congrats! You have completed the quiz!</h1>
@@ -73,6 +73,16 @@
                 <button type="submit" id="submit_score">Submit</button>
             </form>
         </div>
+    </div>
+
+    <!--Container for highscores-->
+    <div class="shown" id="highscores_container">
+        <div class="container highscores">
+            <h1 class="highscore">Highscores</h1>
+            <ol class="score_list" id="highscoreList"></ol>
+        </div>
+        <button class="btn" id="go_back">Go Back</button>
+        <button class="btn" id="clear_highscores">Clear Highscores</button>
     </div>
 
     <script src="script.js"></script>
