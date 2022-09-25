@@ -42,7 +42,7 @@
     <!--Header to allow user to view highscores and see the time remaining -->
     <header>
         <h5 id="view_highscores">View Highscores</h5>
-        <h5 id="timer">Time Left: </h5>
+        <h5>Time Left: <span id="timer"></span></h5>
     </header>
 
     <!--Container that will explain the quiz and rules and allow user to start the quiz-->
@@ -58,7 +58,20 @@
     <div class="hidden" id="question_container">
         <div class="container questions">
             <div id="questions"></div>
-            <div id="answer_buttons"></div>
+            <div class="btn_grid" id="answer_buttons"></div>
+        </div>
+    </div>
+
+    <!--Container that will show result and ask for initials-->
+    <div class="shown" id="ending_container">
+        <div class="container end">
+            <div id="score">
+                <h1>Congrats! You have completed the quiz!</h1>
+            </div>
+            <form>
+                <p>Enter Initials: <input type="text" name="initials" class="text_input" id="initials"/></p>
+                <button type="submit" id="submit_score">Submit</button>
+            </form>
         </div>
     </div>
 
