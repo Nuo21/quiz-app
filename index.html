@@ -46,11 +46,19 @@
     </header>
 
     <!--Container that will explain the quiz and rules and allow user to start the quiz-->
-    <div id="rules_container">
+    <div class="shown" id="starting_container">
         <div class="container start">
             <h1>Quiz</h1>
             <p>Description and rules of quiz here.</p>
             <button id="start_game">Start Quiz</button>
+        </div>
+    </div>
+
+    <!--Contatiner that will have the questions and answer options-->
+    <div class="hidden" id="question_container">
+        <div class="container questions">
+            <div id="questions"></div>
+            <div id="answer_buttons"></div>
         </div>
     </div>
 

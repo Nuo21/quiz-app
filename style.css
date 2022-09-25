@@ -10,6 +10,14 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.shown {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
 header {
     margin: auto;
     display: flex;
@@ -32,6 +40,7 @@ header h5 {
 .start {
     text-align: center;
     align-items: center;
+    border: solid white;
 }
 
 .start h1 {
