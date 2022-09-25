@@ -26,28 +26,28 @@ var score = 0;
 //Array of the quiz questions
 var questions = [
     {
-        q: "QUESTIONS",
-        choices: [{choice: "1"}, {choice: "2"}, {choice: "3"}, {choice: "4"}],
-        a: "ANSWER"
+        q: "Inside which HTML element do we put the JavaScript?",
+        choices: [{choice: '<javascript>'}, {choice: '<js>'}, {choice: '<scripting>'}, {choice: '<script>'}],
+        a: "<script>"
     }
     {
-        q: "QUESTIONS",
-        choices: [{choice: "1"}, {choice: "2"}, {choice: "3"}, {choice: "4"}],
-        a: "ANSWER"
+        q: 'How do you write "Hello World" in an alert box?',
+        choices: [{choice: 'msgBox("Hello World");'}, {choice: 'alert("Hello World");'}, {choice: 'msg("Hello World")'}, {choice: 'alertBox("Hello World");'}],
+        a: 'alert("Hello World");'
     }
     {
-        q: "QUESTIONS",
-        choices: [{choice: "1"}, {choice: "2"}, {choice: "3"}, {choice: "4"}],
-        a: "ANSWER"
+        q: 'How can you add a comment in a JavaScript?',
+        choices: [{choice: '//This is a comment'}, {choice: '<!--This is a comment-->'}, {choice: "'This is a comment"}, {choice: 'None of the above'}],
+        a: '//This is a comment'
     }
     {
-        q: "QUESTIONS",
-        choices: [{choice: "1"}, {choice: "2"}, {choice: "3"}, {choice: "4"}],
-        a: "ANSWER"
+        q: 'Which event occurs when the user clicks on an HTML element?',
+        choices: [{choice: 'onchange'}, {choice: 'onclick'}, {choice: 'onmouseover'}, {choice: 'onmouseclick'}],
+        a: 'onclick'
     }
     {
-        q: "QUESTIONS",
-        choices: [{choice: "1"}, {choice: "2"}, {choice: "3"}, {choice: "4"}],
-        a: "ANSWER"
+        q: 'Which operator is used to assign a value to a variable?',
+        choices: [{choice: 'x'}, {choice: '*'}, {choice: '='}, {choice: '-'}],
+        a: '='
     }
 ];
