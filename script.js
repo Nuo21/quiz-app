@@ -19,3 +19,35 @@ var btnStartEl = document.getElementById("start_game");
 var btnClearScoresEl = document.getElementById("clear_highscores");
 var btnGoBackEl = document.getElementById("go_back");
 var answerButtonsEl = document.getElementById("answer_buttons");
+
+//Beginning score
+var score = 0;
+
+//Array of the quiz questions
+var questions = [
+    {
+        q: "QUESTIONS",
+        choices: [{choice: "1"}, {choice: "2"}, {choice: "3"}, {choice: "4"}],
+        a: "ANSWER"
+    }
+    {
+        q: "QUESTIONS",
+        choices: [{choice: "1"}, {choice: "2"}, {choice: "3"}, {choice: "4"}],
+        a: "ANSWER"
+    }
+    {
+        q: "QUESTIONS",
+        choices: [{choice: "1"}, {choice: "2"}, {choice: "3"}, {choice: "4"}],
+        a: "ANSWER"
+    }
+    {
+        q: "QUESTIONS",
+        choices: [{choice: "1"}, {choice: "2"}, {choice: "3"}, {choice: "4"}],
+        a: "ANSWER"
+    }
+    {
+        q: "QUESTIONS",
+        choices: [{choice: "1"}, {choice: "2"}, {choice: "3"}, {choice: "4"}],
+        a: "ANSWER"
+    }
+];
