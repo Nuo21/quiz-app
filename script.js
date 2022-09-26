@@ -54,7 +54,7 @@ var questions = [
         choices: [{choice: 'x'}, {choice: '*'}, {choice: '='}, {choice: '-'}],
         a: '='
     }
-];
+]
 
 var startGame = function() {
     //Hides the starting screen and starts showing the quiz and questions
@@ -97,8 +97,6 @@ var answerCheck = function(event) {
         score = score + 20;
         //Testing
         console.log(score);
-        questionIndex++;
-        setQuestion();
         
     } else {
         //Testing timer TEMPORARY (make real timer function)
@@ -107,9 +105,26 @@ var answerCheck = function(event) {
         console.log(timeRemaining);
     }
 
+    questionIndex++;
+
+    //This will check if there are more questions to set or not
+    if (shuffledQuestions.length > questionIndex) {
+        setQuestion();
+    } else {
+        console.log("No more questions");
+    }
+
+}
+
+//Clears previous answer button choices
+var clearAnswers = function() {
+    while (answerButtonsEl.firstChild) {
+        answerButtonsEl.removeChild(answerButtonsEl.firstChild);
+    }
 }
 
 var setQuestion = function() {
+    clearAnswers();
     displayQuestion(shuffledQuestions[questionIndex]);
 }
 
