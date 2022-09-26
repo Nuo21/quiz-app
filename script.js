@@ -66,9 +66,16 @@ var startGame = function() {
     console.log("TEST");
 
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
-
+    
+    //Starts timer
+    //setTime()
     //Starts quiz
     setQuestion()
+}
+
+//Sets the timer
+var setTime = function() {
+
 }
 
 var displayQuestion = function(index) {
@@ -84,7 +91,21 @@ var displayQuestion = function(index) {
 }
 
 //Checks to see if the answer is correct
-var answerCheck = function() {
+var answerCheck = function(event) {
+    var userAnswer = event.target;
+    if (shuffledQuestions[questionIndex].a === userAnswer.innerText) {
+        score = score + 20;
+        //Testing
+        console.log(score);
+        questionIndex++;
+        setQuestion();
+        
+    } else {
+        //Testing timer TEMPORARY (make real timer function)
+        var timeRemaining = 40;
+        timeRemaining = timeRemaining - 9;
+        console.log(timeRemaining);
+    }
 
 }
 
