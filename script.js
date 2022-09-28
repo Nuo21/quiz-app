@@ -2,6 +2,7 @@
 var viewHighscoresEl = document.getElementById("view_hightscores");
 var startingContainerEl = document.getElementById("starting_container");
 var questionContainerEl = document.getElementById("question_container");
+var endingContainerEl = document.getElementById("ending_container");
 var highscoreContainerEl = document.getElementById("highscore_container");
 
 var highscoreListEl = document.getElementById("highscore_list");
@@ -9,10 +10,14 @@ var initialsEl = document.getElementById("initials");
 var scoreMsgEl = document.getElementById("score_msg");
 var viewHighscoresEl = document.getElementById("view_highscores");
 var questionsEl = document.getElementById("questions");
+var highscores = [];
 
 //Timer
 var timerEl = document.getElementById("timer");
 timerEl.innerText = 0;
+var timeRemaining = 0;
+
+var gameOver;
 
 //Buttons
 var btnStartEl = document.getElementById("start_game");
@@ -56,6 +61,7 @@ var questions = [
     }
 ]
 
+//Game start
 var startGame = function() {
     //Hides the starting screen and starts showing the quiz and questions
     startingContainerEl.classList.add('hidden');
@@ -68,16 +74,33 @@ var startGame = function() {
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     
     //Starts timer
-    //setTime()
+    setTime()
     //Starts quiz
     setQuestion()
 }
 
 //Sets the timer
-var setTime = function() {
+var setTime = function () {
+    timeRemaining = 40;
 
+var timerCheck = setInterval(function() {
+    timerEl.innerText = timeRemaining;
+    timeRemaining--
+
+    if (gameOver) {
+        clearInterval(timerCheck);
+    }
+   
+    if (timeRemaining < 0) {
+        showScore();
+        timerEl.innerText = 0;
+        clearInterval(timerCheck);
+    }
+
+    }, 1000)
 }
 
+//Displays the questions
 var displayQuestion = function(index) {
     questionsEl.innerText = index.q
     for (var i = 0; i < index.choices.length; i++) {
@@ -98,22 +121,25 @@ var answerCheck = function(event) {
         //Testing
         console.log(score);
         
-    } else {
+    } /*else {
         //Testing timer TEMPORARY (make real timer function)
         var timeRemaining = 40;
         timeRemaining = timeRemaining - 9;
         console.log(timeRemaining);
+    }*/ else {
+        timeRemaining = timeRemaining - 9;
     }
 
     questionIndex++;
 
     //This will check if there are more questions to set or not
-    if (shuffledQuestions.length > questionIndex) {
+    if (shuffledQuestions.length > questionIndex + 1) {
         setQuestion();
     } else {
+        gameOver = true;
         console.log("No more questions");
+        showScore();
     }
-
 }
 
 //Clears previous answer button choices
@@ -123,9 +149,21 @@ var clearAnswers = function() {
     }
 }
 
+//Sets the questions
 var setQuestion = function() {
     clearAnswers();
     displayQuestion(shuffledQuestions[questionIndex]);
+}
+
+//Shows the score
+var showScore = function() {
+    questionContainerEl.classList.add("hidden");
+    endingContainerEl.classList.remove("hidden");
+    endingContainerEl.classList.add("shown");
+
+    var scoreDisplay = document.createElement("p");
+    scoreDisplay.innerText = ("Quiz completed! Your final score is " + score + "/100");
+    scoreMsgEl.appendChild(scoreDisplay);
 }
 
 btnStartEl.addEventListener("click", startGame);
