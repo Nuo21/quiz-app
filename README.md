@@ -6,4 +6,8 @@ Quizzes are a fun way to test your knowledge on certain topics! There are many k
 
 ## Screenshot
 
+![quizSSS](https://user-images.githubusercontent.com/111789697/193474058-0b0b4d00-1009-4890-ba7d-654190a69aaa.png)
+
 ## Live Deploy Link
+
+https://nuo21.github.io/quiz-app/
