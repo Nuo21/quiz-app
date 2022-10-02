@@ -6,7 +6,7 @@ var endingContainerEl = document.getElementById("ending_container");
 var highscoreContainerEl = document.getElementById("highscore_container");
 
 var highscoreListEl = document.getElementById("highscore_list");
-var initialsEl = document.getElementById("initials");
+var initialsFormEl = document.getElementById("initials_form");
 var scoreMsgEl = document.getElementById("score_msg");
 var viewHighscoresEl = document.getElementById("view_highscores");
 var questionsEl = document.getElementById("questions");
@@ -133,7 +133,7 @@ var answerCheck = function(event) {
     questionIndex++;
 
     //This will check if there are more questions to set or not
-    if (shuffledQuestions.length > questionIndex + 1) {
+    if (shuffledQuestions.length > questionIndex) {
         setQuestion();
     } else {
         gameOver = true;
@@ -166,4 +166,16 @@ var showScore = function() {
     scoreMsgEl.appendChild(scoreDisplay);
 }
 
+//create high score values
+var createHighScore = function(event) { 
+    event.preventDefault() 
+    var initials = document.querySelector("#initials").value;
+    if (!initials) {
+      alert("Please enter your initials.");
+      return;
+    }
+}
+
+//Buttons
 btnStartEl.addEventListener("click", startGame);
+initialsFormEl.addEventListener("submit", createHighScore);
